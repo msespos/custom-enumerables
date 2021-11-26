@@ -1,0 +1,1 @@
+A collection of custom-made enumerable methods created as part of the Odin Project curriculum.
