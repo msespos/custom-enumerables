@@ -9,5 +9,5 @@ end
 
 puts 'my_each_with_index vs. each_with_index'
 numbers = [1, 2, 3, 4, 5]
-numbers.my_each_with_index  { |item, index| puts "#{item}, #{index}" }
-numbers.each_with_index  { |item, index| puts "#{item}, #{index}" }
+numbers.my_each_with_index { |item, index| puts "#{item}, #{index}" }
+numbers.each_with_index { |item, index| puts "#{item}, #{index}" }
