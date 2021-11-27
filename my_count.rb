@@ -6,17 +6,15 @@ module Enumerable
     self
   end
 
-  def my_count(*items)
+  def my_count(*args)
     count = 0
     self.my_each do |element|
-      if items == []
-        if block_given?
-          count += 1 if yield element
-        else
-          count += 1
-        end
+      if args != []
+        count += 1 if args[0] == element
+      elsif block_given?
+        count += 1 if yield element
       else
-        count += 1 if items[0] == element
+        count += 1
       end
     end
     count
@@ -31,6 +29,8 @@ puts fibs.my_count(1)
 puts fibs.count(1)
 puts fibs.my_count(nil)
 puts fibs.count(nil)
+puts fibs.my_count(0) { |number| number.odd? }
+puts fibs.count(0) { |number| number.odd? }
 puts fibs.my_count { |number| number.odd? }
 puts fibs.count { |number| number.odd? }
 fibs.my_count
@@ -39,5 +39,7 @@ fibs.my_count(1)
 fibs.count(1)
 fibs.my_count(nil)
 fibs.count(nil)
+fibs.my_count(0) { |number| number.odd? }
+fibs.count(0) { |number| number.odd? }
 fibs.my_count { |number| number.odd? }
 fibs.count { |number| number.odd? }
