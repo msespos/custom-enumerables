@@ -7,7 +7,6 @@ module Enumerable
   end
 
   def my_none?
-    selected = []
     self.my_each do |element|
       return false if yield element
     end

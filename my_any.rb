@@ -7,7 +7,6 @@ module Enumerable
   end
 
   def my_any?
-    selected = []
     self.my_each do |element|
       return true if yield element
     end
