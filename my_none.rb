@@ -25,3 +25,9 @@ puts fibs2.my_none? { |number| number > 5 }
 puts fibs2.none? { |number| number > 5 }
 puts empty.my_none? { |number| number > 5 }
 puts empty.none? { |number| number > 5 }
+fibs1.my_none? { |number| number > 5 }
+fibs1.none? { |number| number > 5 }
+fibs2.my_none? { |number| number > 5 }
+fibs2.none? { |number| number > 5 }
+empty.my_none? { |number| number > 5 }
+empty.none? { |number| number > 5 }

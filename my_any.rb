@@ -25,3 +25,9 @@ puts fibs2.my_any? { |number| number > 5 }
 puts fibs2.any? { |number| number > 5 }
 puts empty.my_any? { |number| number > 5 }
 puts empty.any? { |number| number > 5 }
+fibs1.my_any? { |number| number > 5 }
+fibs1.any? { |number| number > 5 }
+fibs2.my_any? { |number| number > 5 }
+fibs2.any? { |number| number > 5 }
+empty.my_any? { |number| number > 5 }
+empty.any? { |number| number > 5 }

@@ -25,3 +25,9 @@ puts fibs2.my_all? { |number| number > 0 }
 puts fibs2.all? { |number| number > 0 }
 puts empty.my_all? { |number| number > 0 }
 puts empty.all? { |number| number > 0 }
+fibs1.my_all? { |number| number > 0 }
+fibs1.all? { |number| number > 0 }
+fibs2.my_all? { |number| number > 0 }
+fibs2.all? { |number| number > 0 }
+empty.my_all? { |number| number > 0 }
+empty.all? { |number| number > 0 }
