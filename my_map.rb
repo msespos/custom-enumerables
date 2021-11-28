@@ -15,7 +15,7 @@ module Enumerable
   end
 end
 
-puts 'my_each vs. each'
+puts 'my_map vs. map'
 numbers = [1, 2, 3, 4, 5]
 puts numbers.my_map { |item| item ** 2 }
 puts numbers.map { |item| item ** 2 }
