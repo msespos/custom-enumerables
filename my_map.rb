@@ -7,15 +7,12 @@ module Enumerable
   end
 
   def my_map(*args)
-    if args == []
-      elements = []
-      self.my_each do |element|
-        elements << yield(element)
-      end
-    else
-      elements = []
-      self.my_each do |element|
+    elements = []
+    self.my_each do |element|
+      if args != []
         elements << args[0].call(element)
+      else
+        elements << yield(element)
       end
     end
     elements
@@ -38,4 +35,4 @@ numbers.map { |item| item ** 2 }
 numbers.my_map(&my_proc)
 numbers.map(&my_proc)
 numbers.my_map(my_proc)
-
+numbers.my_map(my_proc) { |item| item ** 2 }
